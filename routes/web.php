@@ -5,6 +5,7 @@ use App\Http\Controllers;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\Sample\SampleController;
 use App\Http\Controllers\CsvController;
+use App\Http\Controllers\PDFController;
 use App\Http\Middleware\HelloMiddleware;
 use App\Services\Eat;
 
@@ -36,3 +37,6 @@ Route::middleware([HelloMiddleware::class])->group(function(){
 Route::get('/setCsv', [CsvController::class, 'index']);
 Route::post('/setCsv', [CsvController::class, 'importCsv'])->name('importCsv');
 Route::post('/showCsv', [CsvController::class, 'showCsv'])->name('showCsv');
+
+
+Route::get('pdf', [PDFController::class, 'index']);
