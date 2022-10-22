@@ -16,7 +16,7 @@ font-family: ipag;
 </style>
 </head>
 <body>
-    <p>こんにちは</p>
+    <p>{{$data}}</p>
 </div>
 </body>
 </html>

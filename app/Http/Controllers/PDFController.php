@@ -9,7 +9,8 @@ class PDFController extends Controller
 {
     public function index()
     {
-        $pdf = PDF::loadView('pdf.hello');
+        $data = 'おはようさん';
+        $pdf = PDF::loadView('pdf.hello', compact('data'));
 
         return $pdf->stream('hello.pdf');
     }
