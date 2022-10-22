@@ -32,7 +32,7 @@ class CsvController extends Controller
                 'message'=> $line[3],
             ];
         }
-        return view('csv.showCsv', compact('data'));
+        return view('csv.showCsv', compact('file'));
         // redirect()->route('showCsv', compact('data'));
     }
     public function showCsv()

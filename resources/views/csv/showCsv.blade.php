@@ -6,8 +6,12 @@
     <body>
         <h1>showCSV</h1>
         <ul>
-            @foreach($data as $item)
-             <li>{{$item}}</li>
+            @foreach($file as $data)
+             <li>
+                @foreach($data as $item)
+                {{$item}},
+                @endforeach
+            </li>
             @endforeach
         </ul>
     </body>
