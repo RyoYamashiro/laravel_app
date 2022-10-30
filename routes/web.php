@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers;
-use App\Http\Controllers\HelloController;
-use App\Http\Controllers\Sample\SampleController;
 use App\Http\Controllers\CsvController;
+use App\Http\Controllers\HelloController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\RuleController;
+use App\Http\Controllers\Sample\SampleController;
 use App\Http\Middleware\HelloMiddleware;
 use App\Services\Eat;
 
@@ -38,5 +38,6 @@ Route::get('/setCsv', [CsvController::class, 'index']);
 Route::post('/setCsv', [CsvController::class, 'importCsv'])->name('importCsv');
 Route::post('/showCsv', [CsvController::class, 'showCsv'])->name('showCsv');
 
+Route::get('/rule', [RuleController::class, 'index'])->name('ruleIndex');
 
 Route::get('pdf', [PDFController::class, 'index']);
