@@ -17,7 +17,7 @@ class RuleController extends Controller
     
     public function index(RuleService $rule_service)
     {
-        $rule_service->hoge();
+        $rule_service->hoge('練習');
         return view('rule.index', compact('rule_service'));
     }
 }
